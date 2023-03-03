@@ -51,6 +51,7 @@ class Generic {
     public linesToGet: number = 20;
     public authorName: string = "your name";
     public authorEmail: string = "you@domain.com";
+    public functionName: string = "{func}() - ";
     public authorTag: string = "@author {author} ({email})";
     public dateTemplate: string = "@date {date}";
     public dateFormat: string = "YYYY-MM-DD";
@@ -94,6 +95,7 @@ export class Config {
         values.Generic.authorTag = Generic.getConfiguration().get<string>("authorTag", values.Generic.authorTag);
         values.Generic.authorName = Generic.getConfiguration().get<string>("authorName", values.Generic.authorName);
         values.Generic.authorEmail = Generic.getConfiguration().get<string>("authorEmail", values.Generic.authorEmail);
+        values.Generic.functionName = Generic.getConfiguration().get<string>("functionName", values.Generic.functionName);
         values.Generic.dateTemplate = Generic.getConfiguration().get<string>("dateTemplate", values.Generic.dateTemplate);
         values.Generic.dateFormat = Generic.getConfiguration().get<string>("dateFormat", values.Generic.dateFormat);
         values.Generic.generateSmartText = Generic.getConfiguration().get<boolean>("generateSmartText", values.Generic.generateSmartText);
@@ -112,6 +114,7 @@ export class Config {
     public readonly nameTemplateReplace: string = "{name}";
     public readonly authorTemplateReplace: string = "{author}";
     public readonly emailTemplateReplace: string = "{email}";
+    public readonly functionNameTemplateReplace: string = "{func}";
     public readonly dateTemplateReplace: string = "{date}";
     public readonly yearTemplateReplace: string = "{year}";
     public readonly textTemplateReplace: string = "{text}";
